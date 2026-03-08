@@ -1,11 +1,11 @@
-# homebrew-tools
+# homebrew-tap
 
 `cliip-show` などを Homebrew で配布するための Tap リポジトリです。
 
 ## リポジトリ登録（初回のみ）
 
 ```bash
-brew tap somei-san/tools
+brew tap somei-san/tap
 ```
 
 ## 機能1: cliip-show
@@ -18,10 +18,9 @@ brew tap somei-san/tools
 
 ![cliip-show HUDの表示イメージ](docs/assets/cliip-show-hud.png)
 
-### インストール（初回導入）
+### インストール
 
 ```bash
-brew tap somei-san/tools
 brew install somei-san/tools/cliip-show
 brew services start cliip-show
 ```
@@ -103,9 +102,3 @@ $(brew --prefix)/var/log/cliip-show.log
 brew services stop cliip-show
 brew uninstall cliip-show
 ```
-
-### メンテナー向け
-
-詳細手順:
-
-<https://github.com/somei-san/cliip-show/blob/main/docs/Homebrewで公開する手順.md>
