@@ -32,7 +32,7 @@ brew install --cask somei-san/tap/hatto-to
 
 ---
 
-## 🐟 cliip-show
+## 🥜 cliip-show
 
 コピーしたテキストを画面に HUD 表示する常駐アプリ。
 「コピーしたつもりができてなかった」をなくします。
