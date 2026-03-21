@@ -1,6 +1,6 @@
 cask "hatto-to" do
   version "0.1.0"
-  sha256 "60e8d7b29475bc570a6b709e7c7ada4f6725e8651f9e8aea640b4a02119efedf"
+  sha256 "a093a4f21d5984197db53a14d953947984aa79582e3fd2b42ca1c8c997d276e7"
 
   url "https://github.com/somei-san/hatto-to/releases/download/v#{version}/Hatto-to_0.1.0_universal.dmg"
   name "Hatto-to"
