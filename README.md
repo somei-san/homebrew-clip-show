@@ -1,91 +1,61 @@
-# homebrew-tap
+# somei-san/tap
 
-`cliip-show` などを Homebrew で配布するための Tap リポジトリです。
+macOS 向け自作ツールを Homebrew で配布するための Tap リポジトリです。
 
-## cliip-show
+```bash
+brew tap somei-san/tap
+```
 
-macOS 向けの常駐アプリ。クリップボードにコピーされたプレーンテキストを検知し、画面上部（設定で変更可）に短時間 HUD 表示します。
+---
 
-- source: <https://github.com/somei-san/cliip-show>
-- formula: `Formula/cliip-show.rb`
+## 🐻 貼っとーと (Hatto-to)
 
-![cliip-show HUDの表示イメージ](docs/assets/cliip-show-hud.png)
+デスクトップにぺたぺた貼れる、熊の手つき付箋アプリ。
+Markdown 対応・自動保存・ゴミ箱復元など、macOS Stickies の「惜しい」を解消します。
+
+[リポジトリ](https://github.com/somei-san/hatto-to)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/somei-san/hatto-to/main/assets/hero.svg" alt="貼っとーと スクリーンショット" width="600" />
+</p>
 
 ### インストール
+
+```bash
+brew install --cask somei-san/tap/hatto-to
+```
+
+> **Note:** 現在コード署名がないため、初回起動前に以下を実行してください：
+> ```bash
+> xattr -cr /Applications/Hatto-to.app
+> ```
+
+---
+
+## 🐟 cliip-show
+
+コピーしたテキストを画面に HUD 表示する常駐アプリ。
+「コピーしたつもりができてなかった」をなくします。
+
+[リポジトリ](https://github.com/somei-san/cliip-show)
+
+![cliip-show HUD の表示イメージ](https://raw.githubusercontent.com/somei-san/cliip-show/main/docs/assets/cliip-show-hud.gif)
+
+
+### インストール & 起動
 
 ```bash
 brew install somei-san/tap/cliip-show
 brew services start cliip-show
 ```
 
-### サービス操作
+### 初期設定（お好みで）
 
 ```bash
-brew services start cliip-show    # 起動
-brew services stop cliip-show     # 停止
-brew services restart cliip-show  # 再起動（設定変更後など）
+cliip-show --config init                        # 設定ファイルを生成
+cliip-show --config set hud_position top        # 表示位置 (top / center / bottom)
+cliip-show --config set hud_duration_secs 2.0   # 表示時間
+brew services restart cliip-show                # 設定を反映
 ```
 
-### 動作確認
-
-```bash
-cliip-show --version
-cliip-show --help
-```
-
-### 設定
-
-表示設定は config ファイルで管理できます。
-
-設定ファイル:
-
-- 既定パス: `~/Library/Application Support/cliip-show/config.toml`
-- パス変更: `CLIIP_SHOW_CONFIG_PATH=/path/to/config.toml`
-
-初期化と確認:
-
-```bash
-cliip-show --config init
-cliip-show --config show
-```
-
-よく使う設定の変更例:
-
-```bash
-cliip-show --config set hud_duration_secs 2.5
-cliip-show --config set max_lines 3
-cliip-show --config set hud_position top
-cliip-show --config set hud_scale 1.2
-cliip-show --config set hud_background_color blue
-```
-
-設定キー:
-
-- `poll_interval_secs`（既定値: `0.3`、`0.05` - `5.0`）
-- `hud_duration_secs`（既定値: `1.0`、`0.1` - `10.0`）
-- `max_chars_per_line`（既定値: `100`、`1` - `500`）
-- `max_lines`（既定値: `5`、`1` - `20`）
-- `hud_position`（既定値: `top`、`top` / `center` / `bottom`）
-- `hud_scale`（既定値: `1.1`、`0.5` - `2.0`）
-- `hud_background_color`（既定値: `default`、`default` / `yellow` / `blue` / `green` / `red` / `purple`）
-
-設定反映のため、変更後はサービスを再起動してください。
-
-```bash
-brew services restart cliip-show
-```
-
-### ログ
-
-Homebrew のログ出力先:
-
-```bash
-$(brew --prefix)/var/log/cliip-show.log
-```
-
-### アンインストール
-
-```bash
-brew services stop cliip-show
-brew uninstall cliip-show
-```
+> 全設定項目 → [somei-san/cliip-show](https://github.com/somei-san/cliip-show)
