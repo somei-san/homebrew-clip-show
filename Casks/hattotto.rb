@@ -1,6 +1,6 @@
 cask "hattotto" do
-  version "0.1.2"
-  sha256 "9a02ac551131b0016b285afbb0d528e088aed681f9646616c4227ff0b3047b48"
+  version "0.1.3"
+  sha256 "7dadfc6b8440fa170348ad00df29f678a2f50e5f4597df90408c1c724a8d3ee2"
 
   url "https://github.com/somei-san/hattotto/releases/download/v#{version}/Hattotto_0.1.0_universal.dmg"
   name "Hattotto"
