@@ -8,21 +8,21 @@ brew tap somei-san/tap
 
 ---
 
-## 🐻 貼っとーと (Hatto-to)
+## 🐻 貼っとっと (Hattotto)
 
 デスクトップにぺたぺた貼れる、熊の手つき付箋アプリ。
 Markdown 対応・自動保存・ゴミ箱復元など、macOS Stickies の「惜しい」を解消します。
 
-[リポジトリ](https://github.com/somei-san/hatto-to)
+[リポジトリ](https://github.com/somei-san/hattotto)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/somei-san/hatto-to/main/assets/hero.svg" alt="貼っとーと スクリーンショット" width="600" />
+  <img src="https://raw.githubusercontent.com/somei-san/hattotto/main/assets/hero.svg" alt="貼っとっと スクリーンショット" width="600" />
 </p>
 
 ### インストール
 
 ```bash
-brew install --cask somei-san/tap/hatto-to
+brew install --cask somei-san/tap/hattotto
 ```
 
 ---
